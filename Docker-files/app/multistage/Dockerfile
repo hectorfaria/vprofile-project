@@ -1,7 +1,7 @@
 FROM openjdk:8 AS BUILD_IMAGE
 RUN apt update && apt install maven -y
 RUN git clone -b vp-rem https://github.com/yardiewizardie/vprofile-project
-RUN cd vprofile-repo && mvn install
+RUN cd vprofile-project && mvn install
 
 FROM tomcat:8-jre11
 
